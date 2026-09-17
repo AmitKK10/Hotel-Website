@@ -8,7 +8,7 @@ The project is built as a production-ready hospitality website and can also be a
 
 ## ✨ Live Demo
 
-🌐 **Vercel:** https://YOUR-VERCEL-PROJECT.vercel.app
+🌐 **Vercel:** https://digha-hotel-five.vercel.app/
 
 > Replace the URL above with your actual Vercel deployment URL after deploying the project.
 
