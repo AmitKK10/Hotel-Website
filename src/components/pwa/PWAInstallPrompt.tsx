@@ -63,12 +63,24 @@ export function PWAInstallPrompt() {
               <div className="w-10 h-10 rounded-[14px] bg-[#c5a059]/20 border border-[#c5a059]/40 flex items-center justify-center text-[#f0e2b6] shrink-0">
                 <RefreshCw className="w-5 h-5 animate-spin text-[#c5a059]" />
               </div>
+
               <div>
-                <h4 className="text-sm font-semibold text-stone-100">Update Available</h4>
-                <p className="text-xs text-stone-300">A new version of Digha Beach Resort is ready.</p>
+                <h4 className="text-sm font-semibold text-stone-100">
+                  Update Available
+                </h4>
+
+                <p className="text-xs text-stone-300">
+                  A new version of Digha Beach Resort is ready.
+                </p>
               </div>
             </div>
-            <Button size="sm" variant="gold" onClick={updateApp} className="text-xs py-2 px-3 shrink-0">
+
+            <Button
+              size="sm"
+              variant="gold"
+              onClick={updateApp}
+              className="text-xs py-2 px-3 shrink-0"
+            >
               Refresh
             </Button>
           </motion.div>
@@ -88,15 +100,17 @@ export function PWAInstallPrompt() {
             aria-label="Install Digha Beach Resort App"
           >
             <div className="relative overflow-hidden rounded-[20px] bg-[#020b18]/95 border border-[#c5a059]/35 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.85)] p-4 sm:p-4.5 text-stone-100">
+              
               {/* Subtle top champagne gold accent line */}
               <div className="absolute top-0 left-6 right-6 h-[1.5px] bg-gradient-to-r from-transparent via-[#f0e2b6]/60 to-transparent" />
 
               {/* Header & Main Info */}
               <div className="flex items-start gap-3.5">
+                
                 {/* Resort Icon with Gold Ambient Border */}
                 <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-[14px] overflow-hidden bg-[#020a14] border border-[#c5a059]/40 shadow-lg shadow-[#c5a059]/15 shrink-0 flex items-center justify-center">
                   <img
-                    src="/icons/icon-192x192.png"
+                    src="/icons/icon-192.png"
                     alt="Digha Beach Resort App Icon"
                     className="w-full h-full object-cover"
                   />
@@ -104,11 +118,13 @@ export function PWAInstallPrompt() {
 
                 {/* Content */}
                 <div className="flex-1 min-w-0 pr-6">
+                  
                   {/* Top Bar with Brand Tag & PWA Badge */}
                   <div className="flex items-center gap-2">
                     <span className="text-[11px] font-mono font-bold tracking-wider text-stone-200 uppercase truncate">
                       INSTALL DIGHA RESORT
                     </span>
+
                     <span className="px-1.5 py-0.5 rounded-[4px] bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 text-[9px] font-mono font-bold tracking-wider leading-none">
                       PWA
                     </span>
@@ -137,14 +153,19 @@ export function PWAInstallPrompt() {
 
               {/* Bottom Action Area */}
               <div className="mt-3.5 pt-3 border-t border-white/10 flex items-center justify-between gap-2">
+                
                 {/* Left Side: Micro Benefits */}
                 <div className="flex items-center gap-2 text-[11px] font-mono text-stone-400">
                   <span className="flex items-center gap-1">
-                    <Zap className="w-3 h-3 text-[#c5a059]" /> Faster
+                    <Zap className="w-3 h-3 text-[#c5a059]" />
+                    Faster
                   </span>
+
                   <span className="text-stone-600">•</span>
+
                   <span className="flex items-center gap-1">
-                    <Smartphone className="w-3 h-3 text-sky-400" /> Home Screen
+                    <Smartphone className="w-3 h-3 text-sky-400" />
+                    Home Screen
                   </span>
                 </div>
 
@@ -166,6 +187,7 @@ export function PWAInstallPrompt() {
                     ) : (
                       <Download className="w-3.5 h-3.5 stroke-[2.5]" />
                     )}
+
                     <span>{isIOS ? 'Add to Home' : 'Install'}</span>
                   </button>
                 </div>
@@ -188,23 +210,30 @@ export function PWAInstallPrompt() {
               role="dialog"
               aria-label="iOS Installation Guide"
             >
+              
               {/* Header */}
               <div className="flex items-start justify-between gap-4 mb-4">
                 <div className="flex items-center gap-3">
+                  
                   <div className="w-11 h-11 rounded-[14px] overflow-hidden bg-[#020a14] border border-[#c5a059]/40 flex items-center justify-center shrink-0">
                     <img
-                      src="/icons/icon-192x192.png"
+                      src="/icons/icon-192.png"
                       alt="Digha Beach Resort App Icon"
                       className="w-full h-full object-cover"
                     />
                   </div>
+
                   <div>
                     <h3 className="text-base font-serif font-semibold text-stone-100">
                       Add to Home Screen
                     </h3>
-                    <p className="text-xs text-stone-400">Install Digha Beach Resort on iOS Safari</p>
+
+                    <p className="text-xs text-stone-400">
+                      Install Digha Beach Resort on iOS Safari
+                    </p>
                   </div>
                 </div>
+
                 <button
                   onClick={closeInstallGuide}
                   className="p-2 rounded-xl text-stone-400 hover:text-stone-100 bg-white/5 hover:bg-white/10 transition-colors cursor-pointer"
@@ -216,16 +245,24 @@ export function PWAInstallPrompt() {
 
               {/* Steps */}
               <div className="space-y-3 my-5 text-xs text-stone-200">
+                
                 <div className="flex items-start gap-3 p-3.5 rounded-2xl bg-white/[0.03] border border-white/10">
                   <div className="w-6 h-6 rounded-full bg-[#c5a059]/20 text-[#f0e2b6] font-mono font-bold flex items-center justify-center shrink-0 text-xs">
                     1
                   </div>
+
                   <div className="space-y-1">
                     <p className="font-medium text-stone-100">
-                      Tap the <span className="text-[#f0e2b6] font-semibold">Share</span> button
+                      Tap the{' '}
+                      <span className="text-[#f0e2b6] font-semibold">
+                        Share
+                      </span>{' '}
+                      button
                     </p>
+
                     <p className="text-stone-400 flex items-center gap-1.5">
-                      Found in your Safari browser navigation bar: <Share className="w-3.5 h-3.5 text-[#c5a059] inline" />
+                      Found in your Safari browser navigation bar:{' '}
+                      <Share className="w-3.5 h-3.5 text-[#c5a059] inline" />
                     </p>
                   </div>
                 </div>
@@ -234,12 +271,18 @@ export function PWAInstallPrompt() {
                   <div className="w-6 h-6 rounded-full bg-[#c5a059]/20 text-[#f0e2b6] font-mono font-bold flex items-center justify-center shrink-0 text-xs">
                     2
                   </div>
+
                   <div className="space-y-1">
                     <p className="font-medium text-stone-100">
-                      Select <span className="text-[#f0e2b6] font-semibold">'Add to Home Screen'</span>
+                      Select{' '}
+                      <span className="text-[#f0e2b6] font-semibold">
+                        'Add to Home Screen'
+                      </span>
                     </p>
+
                     <p className="text-stone-400 flex items-center gap-1.5">
-                      Scroll down in the action sheet and tap <PlusSquare className="w-3.5 h-3.5 text-[#c5a059] inline" />
+                      Scroll down in the action sheet and tap{' '}
+                      <PlusSquare className="w-3.5 h-3.5 text-[#c5a059] inline" />
                     </p>
                   </div>
                 </div>
