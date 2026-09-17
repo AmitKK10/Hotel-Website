@@ -1,0 +1,6 @@
+{
+  "name": "Digha Beach Resort",
+  "description": "Luxury sea-facing resort & hospitality experience in Digha, West Bengal",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

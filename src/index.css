@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif-display: 'Cormorant Garamond', Georgia, serif;
+    --font-serif-accent: 'Cinzel', serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+
+    --color-bg-dark: #020a14;
+    --color-gold: #c5a059;
+    --color-gold-light: #f0e2b6;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--color-bg-dark);
+    color: #f7f6f0;
+    overflow-x: hidden;
+    letter-spacing: -0.01em;
+  }
+
+  /* Typography utilities */
+  h1, h2, h3, h4, .font-serif-display {
+    font-family: var(--font-serif-display);
+    letter-spacing: -0.015em;
+  }
+
+  .font-serif-accent {
+    font-family: var(--font-serif-accent);
+  }
+
+  .font-sans-body {
+    font-family: var(--font-sans);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020a14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #12283f;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a059;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(8, 26, 44, 0.45);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+.glass-gold {
+  background: rgba(197, 160, 89, 0.06);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+/* Text Gradients */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #fff2d4 0%, #e2c286 50%, #c5a059 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-ocean {
+  background: linear-gradient(135deg, #ffffff 0%, #a0c4df 50%, #205c8d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Luxury Glow */
+.gold-glow {
+  box-shadow: 0 10px 40px rgba(197, 160, 89, 0.15);
+}
+
+.ocean-glow {
+  box-shadow: 0 15px 45px rgba(18, 56, 88, 0.25);
+}
+
+/* Custom Selection */
+::selection {
+  background-color: rgba(217, 155, 38, 0.3);
+  color: #fdeabb;
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
